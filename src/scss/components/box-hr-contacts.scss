@@ -1,0 +1,56 @@
+.box-hr-contacts {
+  padding: 36px;
+  border-radius: 20px;
+  background-color: var(--gray, #F5F5F5);
+  background-image: url('../img/box-hr-contacts/bg.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @media (max-width: 1000px) {
+    padding: 24px;
+    background-image: url('../img/box-hr-contacts/bg-1000.svg');
+    background-position: right bottom;
+    background-size: auto;
+  }
+  &__title {
+    color: var(--black, #000);
+    font-family: var(--font-family);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%;
+    @media (max-width: 1000px) {
+      font-size: 22px;
+    }
+  }
+  &__list {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    @media (max-width: 1000px) {
+      flex-direction: column;
+    }
+  }
+  .box-contact {
+    .text {
+      font-size: 18px;
+      line-height: 120%;
+      @media (max-width: 1000px) {
+
+      }
+    }
+    .info {
+      font-size: 18px;
+      line-height: 130%;
+    }
+    a {
+      font-size: 18px;
+      line-height: 130%;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.swiper-location {
+  .swiper-slide {
+    box-sizing: border-box;
+    height: auto;
+  }
+  &-group-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  &-pagination {
+    padding: 2px 11px;
+    height: 48px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-text, #C8C7C7);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 1000px;
+    border: 1px solid #EAEAEA;
+    .swiper-pagination-current {
+      color: #000;
+    }
+  }
+}

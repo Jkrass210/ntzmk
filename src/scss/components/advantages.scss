@@ -1,0 +1,17 @@
+.advantages {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 24px;
+    row-gap: 44px;
+    @media (max-width: 1100px) {
+      column-gap: 20px;
+      row-gap: 32px;
+    }
+    @media (max-width: 1100px) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 16px;
+      row-gap: 20px;
+    }
+  }
+}

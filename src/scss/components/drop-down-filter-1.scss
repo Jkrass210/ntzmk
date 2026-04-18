@@ -1,0 +1,107 @@
+.drop-down-filter-1 {
+  position: relative;
+  display: flex;
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
+  &__btn {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 24px 20px 28px;
+    border-radius: 100px;
+    color: var(--black, #000);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 117.647%;
+    border: 1px solid var(--gray-10, #EAEAEA);
+    transition: border-color 0.4s ease-in-out, background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+    @media (max-width: 1100px) {
+      padding: 16px 24px 16px 28px;
+    }
+    @media (max-width: 1000px) {
+      width: 100%;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .svg {
+      width: 20px;
+      height: 20px;
+      background-color: var(--green);
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.4s ease-in-out, background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+    }
+    svg {
+      transition: transform 0.4s ease-in-out, color 0.4s ease-in-out;
+      color: var(--white);
+    }
+    &.active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    @media (min-width: 1001px) {
+      &:focus-visible,&:hover {
+        background-color: var(--green);
+        border-color: var(--green);
+        color: var(--white);
+        .svg {
+          background-color: var(--white);
+        }
+        svg {
+          color: var(--green);
+        }
+      }
+    }
+  }
+  &__box {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 5;
+    width: 100%;
+    position: absolute;
+    top: calc(100% + 4px);
+    display: flex;
+    flex-direction: column;
+    border-radius: 24px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.04), 0 8px 16px 0 rgba(0, 0, 0, 0.08);
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__link {
+    padding: 22px 54px 22px 28px;
+    width: 100%;
+    color: var(--black, #000);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 117.647%;
+    transition: background-color 0.4s ease-in-out;
+    &.disabled {
+      pointer-events: none;
+      background-image: url('../img/drop-down-filter-1/icon.svg');
+      background-repeat: no-repeat;
+      background-position: center right 24px;
+    }
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    @media (min-width: 1001px) {
+      &:focus-visible, &:hover {
+        background-color: var(--gray);
+      }
+    }
+  }
+}

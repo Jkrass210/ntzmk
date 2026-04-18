@@ -1,0 +1,29 @@
+.box-product-review {
+  padding: 52px;
+  border-radius: 24px;
+  border: 1px solid var(--gray-10, #EAEAEA);
+  @media (max-width: 1100px) {
+    padding: 36px;
+  }
+  @media (max-width: 1000px) {
+    padding: 24px;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  &__title {
+    margin-bottom: 24px;
+    color: var(--black, #000);
+    font-family: var(--font-family);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 135%;
+    @media (max-width: 1100px) {
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+    @media (max-width: 1000px) {
+      margin-bottom: 16px;
+    }
+  }
+}

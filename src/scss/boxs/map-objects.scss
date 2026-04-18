@@ -1,0 +1,27 @@
+.map-objects {
+  &-section {
+    margin-top: 148px;
+    @media (max-width: 1300px) {
+      margin-top: 61px;
+    }
+    @media (max-width: 1300px) {
+      margin-top: 61px;
+    }
+  }
+  &-container {
+    padding-left: 82px;
+    max-width: 1816px;
+    margin: 0 auto;
+    @media (max-width: 1600px) {
+      padding-left: 0px;
+    }
+    @media (max-width: 1300px) {
+      padding: 0 24px;
+    }
+  }
+  &-box {
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+}

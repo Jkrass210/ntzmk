@@ -1,0 +1,46 @@
+.logo-head {
+  position: relative;
+  height: 48px;
+  width: 100%;
+  max-width: 130px;
+  display: flex;
+
+  .white {
+    display: none;
+  }
+
+  &__link {
+    position: absolute;
+    display: flex;
+
+    &:focus-visible {
+      outline: 1px solid rgb(177, 170, 170);
+    }
+
+    &.first {
+      inset: 55% 0 0 0;
+    }
+
+    &.last {
+      inset: 0 0 45% 0;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    max-width: 119px;
+    height: 44px;
+  }
+
+  @media (max-width: 1000px) {
+    max-width: 87px;
+    height: 32px;
+    &__link {
+      &.first {
+        inset: 0 40% 0 0;
+      }
+      &.last {
+        inset: 0 0 0 60%;
+      }
+    }
+  }
+}

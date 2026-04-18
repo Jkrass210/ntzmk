@@ -1,0 +1,30 @@
+.box-desc-link {
+  margin-top: 72px;
+  padding-top: 72px;
+  border-top: 1px solid var(--gray-10, #EAEAEA);
+  display: flex;
+  gap: 24px;
+  @media (max-width: 1100px) {
+    margin-top: 56px;
+    padding-top: 56px;
+    gap: 20px;
+  }
+  @media (max-width: 1000px) {
+    display: none;
+  }
+  .left {
+    flex: 1;
+  }
+  .right {
+    flex: 1;
+  }
+  &__group-link {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    @media (max-width: 1100px) {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  }
+}

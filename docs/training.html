@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обучение</title>
+  <link href="css/normalize.min.css?_v=20260331123906" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20260331123906" rel="stylesheet">
+  <link href="css/style.css?_v=20260331123906" rel="stylesheet">
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20260331123906"></script>
+  
+  <script src="js/jquery-3.7.1.min.js?_v=20260331123906" defer></script>
+  <script src="js/jquery.validate.min.js?_v=20260331123906" defer></script>
+  <script src="js/jquery.inputmask.min.js?_v=20260331123906" defer></script>
+  <script src="js/swiper-bundle.min.js?_v=20260331123906" defer></script>
+  <script src="js/fslightbox.js?_v=20260331123906" defer></script>
+  <script type="module" src="js/main.js?_v=20260331123906"></script>
+</head>
+
+<body>
+  <div id="preloader">
+  <div class="loader"></div>
+</div>
+  <header class="header" id="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <div class="header__top">
+        <div class="logo-head">
+  <a href="/" class="logo-head__link first"></a>
+  <a href="https://www.nec.pro/" class="logo-head__link last"></a>
+  <picture class="white">
+    <source srcset="img/logo/logo-min.svg" media="(max-width: 1000px)">
+    <img src="img/logo/logo.svg" alt="svg">
+  </picture>
+  <picture class="dark">
+    <source srcset="img/logo/logo-dark-min.svg" media="(max-width: 1000px)">
+    <img src="img/logo/logo-dark.svg" alt="svg">
+  </picture>
+</div>
+        <div class="header__contacts">
+          <div class="modal-contacts__body">
+            <div class="modal-contacts__window">
+              <p class="modal-contacts__title">Выберите удобный способ</p>
+              <article class="box-contact">
+                <span class="text">Телефон</span>
+                <a href="tel:+7 (3435) 299-355">+7 (3435) 299-355</a>
+              </article>
+
+              <article class="box-contact mail">
+                <span class="text">Эл. адрес</span>
+                <a href="mailto:mail@ntzmk.ru">mail@ntzmk.ru</a>
+              </article>
+
+              <button class="btn-type-1 js-open-modal btn-reset" data-modal="online-order">
+                <span class="text">Онлайн заявка</span>
+              </button>
+            </div>
+            <button class="modal-contacts__close js-close btn-reset">
+              <span class="text">Закрыть</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="header__group-btn-mobile">
+          <button class="btn-contact btn-reset open-contacts">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <use xlink:href="img/sprite.svg#contactPhone"></use>
+            </svg>
+          </button>
+
+          <button class="btn-burger btn-reset">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <use xlink:href="img/sprite.svg#burger"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="header__menu">
+          <button class="btn-close js-close btn-reset">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <use xlink:href="img/sprite.svg#btnClose"></use>
+            </svg>
+          </button>
+
+          <div class="header-scroll header-scroll__box-logo">
+            <div class="logo-head">
+  <a href="/" class="logo-head__link first"></a>
+  <a href="https://www.nec.pro/" class="logo-head__link last"></a>
+  <picture class="white">
+    <source srcset="img/logo/logo-min.svg" media="(max-width: 1000px)">
+    <img src="img/logo/logo.svg" alt="svg">
+  </picture>
+  <picture class="dark">
+    <source srcset="img/logo/logo-dark-min.svg" media="(max-width: 1000px)">
+    <img src="img/logo/logo-dark.svg" alt="svg">
+  </picture>
+</div>
+          </div>
+
+          <nav class="header__nav">
+            <ul class="header__nav-list list-reset">
+              <li class="header__nav-item">
+                <div class="drop-down-type-1">
+                  <a href="#" class="drop-down-type-1__main-btn">
+                    <span class="text">О компании</span>
+                    <span class="svg">
+                      <svg width="7" height="4" viewBox="0 0 7 4" fill="none">
+                        <use xlink:href="img/sprite.svg#arrowDropDown1"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <div class="drop-down-type-1__box">
+                    <div class="drop-down-type-1__line-top">
+                      <button class="btn-back btn-reset js-close">
+                        <span class="svg">
+                          <svg width="32" height="21" viewBox="0 0 32 21" fill="none">
+                            <use xlink:href="img/sprite.svg#btnBack"></use>
+                          </svg>
+                        </span>
+                        <span class="text">
+                          Вернуться назад
+                        </span>
+                      </button>
+                      <h4 class="drop-down-type-1__name">О компании</h4>
+                    </div>
+                    <ul class="drop-down-type-1__list list-reset">
+                      <li class="drop-down-type-1__item">
+                        <a href="#" class="drop-down-type-1__item-link">История</a>
+                      </li>
+                      <li class="drop-down-type-1__item">
+                        <a href="#" class="drop-down-type-1__item-link">Сертификаты</a>
+                      </li>
+                      <li class="drop-down-type-1__item">
+                        <a href="#" class="drop-down-type-1__item-link">Фильм</a>
+                      </li>
+                      <li class="drop-down-type-1__item">
+                        <a href="#" class="drop-down-type-1__item-link">Книга о заводе</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="header__nav-item">
+                <div class="drop-down-type-1">
+                  <a href="#" class="drop-down-type-1__main-btn">
+                    <span class="text">Продукция</span>
+                    <span class="svg">
+                      <svg width="7" height="4" viewBox="0 0 7 4" fill="none">
+                        <use xlink:href="img/sprite.svg#arrowDropDown1"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <div class="drop-down-type-1__box">
+                    <div class="drop-down-type-1__line-top">
+                      <button class="btn-back btn-reset js-close">
+                        <span class="svg">
+                          <svg width="32" height="21" viewBox="0 0 32 21" fill="none">
+                            <use xlink:href="img/sprite.svg#btnBack"></use>
+                          </svg>
+                        </span>
+                        <span class="text">
+                          Вернуться назад
+                        </span>
+                      </button>
+                      <h4 class="drop-down-type-1__name">Продукция</h4>
+                    </div>
+                    <ul class="drop-down-type-1__list list-reset">
+                      <li class="drop-down-type-1__item">
+                        <a href="#" class="drop-down-type-1__item-link">История df</a>
+                      </li>
+                      <li class="drop-down-type-1__item">
+                        <a href="#" class="drop-down-type-1__item-link">dfdfsds</a>
+                      </li>
+                      <li class="drop-down-type-1__item">
+                        <a href="#" class="drop-down-type-1__item-link">Фильм</a>
+                      </li>
+                      <li class="drop-down-type-1__item">
+                        <a href="#" class="drop-down-type-1__item-link">Фильм</a>
+                      </li>
+                      <li class="drop-down-type-1__item">
+                        <a href="#" class="drop-down-type-1__item-link">Книга о заводе</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="nav-link">География</a>
+              </li>
+              <li class="header__nav-item">
+                <div class="drop-down-type-1">
+                  <a href="#" class="drop-down-type-1__main-btn">
+                    <span class="text">Партнеры</span>
+                    <span class="svg">
+                      <svg width="7" height="4" viewBox="0 0 7 4" fill="none">
+                        <use xlink:href="img/sprite.svg#arrowDropDown1"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <div class="drop-down-type-1__box">
+                    <div class="drop-down-type-1__line-top">
+                      <button class="btn-back btn-reset js-close">
+                        <span class="svg">
+                          <svg width="32" height="21" viewBox="0 0 32 21" fill="none">
+                            <use xlink:href="img/sprite.svg#btnBack"></use>
+                          </svg>
+                        </span>
+                        <span class="text">
+                          Вернуться назад
+                        </span>
+                      </button>
+                      <h4 class="drop-down-type-1__name">Партнеры</h4>
+                    </div>
+                    <ul class="drop-down-type-1__list list-reset">
+                      <li class="drop-down-type-1__item">
+                        <a href="#" class="drop-down-type-1__item-link">История df</a>
+                      </li>
+                      <li class="drop-down-type-1__item">
+                        <a href="#" class="drop-down-type-1__item-link">Фильм</a>
+                      </li>
+                      <li class="drop-down-type-1__item">
+                        <a href="#" class="drop-down-type-1__item-link">Книга о заводе</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="nav-link">Вакансии</a>
+              </li>
+              <li class="header__nav-item">
+                <div class="drop-down-type-1">
+                  <a href="#" class="drop-down-type-1__main-btn">
+                    <span class="text">Новости</span>
+                    <span class="svg">
+                      <svg width="7" height="4" viewBox="0 0 7 4" fill="none">
+                        <use xlink:href="img/sprite.svg#arrowDropDown1"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <div class="drop-down-type-1__box">
+                    <div class="drop-down-type-1__line-top">
+                      <button class="btn-back btn-reset js-close">
+                        <span class="svg">
+                          <svg width="32" height="21" viewBox="0 0 32 21" fill="none">
+                            <use xlink:href="img/sprite.svg#btnBack"></use>
+                          </svg>
+                        </span>
+                        <span class="text">
+                          Вернуться назад
+                        </span>
+                      </button>
+                      <h4 class="drop-down-type-1__name">Новости</h4>
+                    </div>
+                    <ul class="drop-down-type-1__list list-reset">
+                      <li class="drop-down-type-1__item">
+                        <a href="#" class="drop-down-type-1__item-link">История</a>
+                      </li>
+                      <li class="drop-down-type-1__item">
+                        <a href="#" class="drop-down-type-1__item-link">Фильм</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="nav-link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header-scroll header-scroll__group-btn">
+            <a class="link-hidden" href="tel:+7 (3435) 299-355">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <use xlink:href="img/sprite.svg#contactPhone"></use>
+              </svg>
+            </a>
+
+            <a class="link-hidden" href="mailto:mail@ntzmk.ru">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <use xlink:href="img/sprite.svg#mailto"></use>
+              </svg>
+            </a>
+
+            <button class="btn-type-1 js-open-modal btn-reset" data-modal="online-order">
+              <span class="text">Онлайн заявка</span>
+            </button>
+          </div>
+
+          <div class="header__group-contacts-mobile">
+            <article class="box-contact">
+              <span class="text">Телефон</span>
+              <a href="tel:+7 (3435) 299-355">+7 (3435) 299-355</a>
+            </article>
+
+            <article class="box-contact mail">
+              <span class="text">Эл. адрес</span>
+              <a href="mailto:mail@ntzmk.ru">mail@ntzmk.ru</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+  <main class="main">
+    <div class="path">
+  <div class="container">
+    <ul class="path__list list-reset">
+      <li>
+        <a href="/">Главная страница</a>
+      </li>
+      <li>
+        <a href="#">Обучение</a>
+      </li>
+    </ul>
+    <div class="path__box-back">
+      <a class="path__link-back" href="#">
+        <svg width="32" height="21" viewBox="0 0 32 21" fill="none">
+          <use xlink:href="img/sprite.svg#arrBack"></use>
+        </svg>
+        <span class="text">Вернуться назад</span>
+      </a>
+    </div>
+  </div>
+</div>
+    <div class="title-page">
+  <div class="container">
+    <div class="title-page__line">
+      <h1 class="title">Обучение</h1>
+    </div>
+  </div>
+</div>
+    <section class="mt-32">
+  <div class="container">
+    <!--навигация только на мобиле-->
+    <div class="nav-menu-mobile">
+      <div class="drop-down-nav">
+        <button class="drop-down-nav__btn btn-reset">
+          <span class="text">Образование</span>
+          <span class="svg">
+            <svg width="8" height="4" viewBox="0 0 8 4" fill="none">
+              <use xlink:href="img/sprite.svg#dropDownNav"></use>
+            </svg>
+          </span>
+        </button>
+        <div class="drop-down-nav__box">
+          <button class="drop-down-nav__btn-back btn-reset">
+            <span>Назад в меню</span>
+          </button>
+          <ul class="drop-down-nav__list list-reset">
+            <li>
+              <a class="drop-down-nav__link" href="#">Основные сведения</a>
+            </li>
+            <li>
+              <a class="drop-down-nav__link" href="#">Структура и органы управления</a>
+            </li>
+            <li>
+              <a class="drop-down-nav__link active" href="#">Образование</a>
+            </li>
+            <li>
+              <a class="drop-down-nav__link" href="#">Педагогический состав</a>
+            </li>
+            <li>
+              <a class="drop-down-nav__link" href="#">Материально-техническое обеспечение</a>
+            </li>
+            <li>
+              <a class="drop-down-nav__link" href="#">Платные образовательные услуги</a>
+            </li>
+            <li>
+              <a class="drop-down-nav__link" href="#">Финансово-хозяйственная деятельность</a>
+            </li>
+            <li>
+              <a class="drop-down-nav__link" href="#">Электронный кадровый документооборот</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="box-main-info">
+      <div class="box-main-info__content">
+        <div class="box-training">
+          <div class="static-box-p-ul">
+            <p>
+              ООО «Нижнетагильский завод металлических конструкций» осуществляет системную подготовку, переподготовку
+              и повышение квалификации работников завода, направленную на приобретение знаний, умений, навыков
+              и формирование компетенций, необходимых для выполнения определённых трудовых функций.
+            </p>
+            <p>
+              Процесс обучения проводится в соответствии с:
+            </p>
+            <ul>
+              <li>
+                Действующим законодательством Российской Федерации;
+              </li>
+              <li>
+                Нормативными документами Министерства общего и профессионального образования РФ и иными нормативными
+                актами РФ;
+              </li>
+              <li>
+                Законами, постановлениями, распоряжениями Правительства Свердловской области по вопросам подготовки
+                и повышения квалификации кадров;
+              </li>
+              <li>
+                Методическими, нормативными и другими материалами по вопросам подготовки и повышения квалификации
+                кадров;
+              </li>
+              <li>
+                Уставом, иными локальными нормативными актами ООО «НТЗМК».
+              </li>
+            </ul>
+            <p>
+              ООО «Нижнетагильский завод металлических конструкций» предлагает очень востребованные и доступные
+              направления профессиональной подготовки, переподготовки и повышения квалификации. У нас можно не только
+              повысить квалификацию по рабочим профессиям, но и получить дополнительное обучение по смежным профессиям.
+              Рабочий, в совершенстве владеющий тремя-четырьмя профессиями, наиболее востребован на современном рынке
+              труда.
+            </p>
+            <p>
+              <strong>Профессиональная подготовка</strong> – это дополнительное образование, позволяющее освоить новую
+              профессию в довольно сжатые сроки; сохранение оптимального развития профессионального потенциала
+              предприятия; подготовка работника к ротационному перемещению.
+            </p>
+            <p>
+              <strong>Профессиональная переподготовка</strong> – это обучение профильным дисциплинам, соответствующим
+              выбранной профессии; повышение уровня квалификации персонала предприятия и перспектив его развития, с
+              учетом требований конкурентного рынка.
+            </p>
+            <p>
+              <strong>Повышение квалификации</strong> – это усовершенствование знаний, умений, навыков и приобретение
+              практического опыта в определенных вопросах профессиональной деятельности; создание условий для
+              профессионального роста, самореализации работников в условиях рыночной экономики на основе повышения
+              мотивации к труду.
+            </p>
+            <p>
+              <strong>Форма обучения</strong> – очная индивидуальная/курсовая
+            </p>
+            <p>
+              <strong>Итоговый результат обучения</strong> – после прохождения обучения по выбранному направлению и
+              успешной сдаче квалификационного экзамена, обучающиеся получат:
+            </p>
+            <ul>
+              <li>
+                Удостоверение установленного образца
+              </li>
+              <li>
+                Свидетельство установленного образца
+              </li>
+            </ul>
+            <p>
+              <strong>Профессиональное обучение</strong>
+            </p>
+            <ul>
+              <li>
+                <a href="#">Обучение на вальцовщика</a>
+              </li>
+              <li>
+                <a href="#">Обучение на газорезчика</a>
+              </li>
+              <li>
+                <a href="#">Обучение на обрубщика</a>
+              </li>
+              <li>
+                <a href="#">Обучение на фрезеровщика</a>
+              </li>
+              <li>
+                <a href="#">Обучение на оператора станков с программным управлением</a>
+              </li>
+              <li>
+                <a href="#">Обучение на слесаря по сборке металлоконструкций</a>
+              </li>
+              <li>
+                <a href="#">Обучение на чистильщика металла, отливок, изделий и деталей</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="box-main-info__nav">
+        <aside class="menu-aside">
+          <nav class="menu-aside__nav">
+            <!--при добавлении класса active на ссылку она становиться активна-->
+            <ul class="menu-aside__list list-reset">
+              <li>
+                <a href="#" class="menu-aside__link">Основные сведения</a>
+              </li>
+              <li>
+                <a href="#" class="menu-aside__link">Структура и органы управления</a>
+              </li>
+              <li>
+                <a href="#" class="menu-aside__link">Документы</a>
+              </li>
+              <li>
+                <a href="#" class="menu-aside__link active">Образование</a>
+              </li>
+              <li>
+                <a href="#" class="menu-aside__link">Педагогический состав</a>
+              </li>
+              <li>
+                <a href="#" class="menu-aside__link">Материально-техническое обеспечение</a>
+              </li>
+              <li>
+                <a href="#" class="menu-aside__link">Платные образовательные услуги</a>
+              </li>
+              <li>
+                <a href="#" class="menu-aside__link">Финансово-хозяйственная деятельность</a>
+              </li>
+              <li>
+                <a href="#" class="menu-aside__link">Электронный кадровый документооборот</a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+      </div>
+      <div class="box-main-info__contacts">
+        <div class="box-hr-contacts">
+          <h3 class="box-hr-contacts__title">Контакты отдела кадров</h3>
+          <ul class="box-hr-contacts__list list-reset">
+            <li>
+              <article class="box-contact">
+                <span class="text">Телефон</span>
+                <a href="tel:8 (3435) 299-327">8 (3435) 299-327</a>
+                <a href="tel:8 (3435) 299-343">8 (3435) 299-343</a>
+                <a href="tel:8 (912) 680-04-57">8 (912) 680-04-57</a>
+              </article>
+            </li>
+            <li>
+              <article class="box-contact mail">
+                <span class="text">Эл. почта</span>
+                <a href="mailto:grudinina@ntzmk.ru">grudinina@ntzmk.ru</a>
+                <a href="mailto:harlamova@ntzmk.ru">harlamova@ntzmk.ru</a>
+              </article>
+            </li>
+            <li>
+              <article class="box-contact">
+                <span class="text">Адрес</span>
+                <span class="info">622005, г. Нижний Тагил,<br>ул. Шевченко, 10</span>
+              </article>
+            </li>
+            <li>
+              <article class="box-contact">
+                <span class="text">Часы работы</span>
+                <span class="info">Пн-пт<br>с 8:30 до 17:20</span>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+  <footer class="footer mt-148" id="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <div class="footer__top">
+        <div class="footer__top-left">
+          <div class="logo-foot">
+  <a href="/" class="logo-foot__link first"></a>
+  <a href="https://www.nec.pro/" class="logo-foot__link last"></a>
+  <picture>
+    <source srcset="img/logo/logo-foot-min.svg" media="(max-width: 1100px)">
+    <img src="img/logo/logo-foot.svg" alt="svg">
+  </picture>
+</div>
+        </div>
+        <div class="footer__top-right">
+          <nav class="footer__nav">
+            <ul class="footer__list list-reset">
+              <li>
+                <a href="#" class="foot-nav-link">О компании</a>
+              </li>
+              <li>
+                <a href="#" class="foot-nav-link">Продукция</a>
+              </li>
+              <li>
+                <a href="#" class="foot-nav-link">География</a>
+              </li>
+              <li>
+                <a href="#" class="foot-nav-link">Партнеры</a>
+              </li>
+              <li>
+                <a href="#" class="foot-nav-link">Вакансии</a>
+              </li>
+              <li>
+                <a href="#" class="foot-nav-link">Новости</a>
+              </li>
+              <li>
+                <a href="#" class="foot-nav-link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="footer__address">
+            <article class="box-contact">
+              <span class="text">Телефон</span>
+              <a href="tel:+7 (3435) 299-355">+7 (3435) 299-355</a>
+            </article>
+
+            <article class="box-contact">
+              <span class="text">Адрес</span>
+              <span class="info">
+                г. Нижний Тагил, ул. Шевченко, д.10
+              </span>
+              <a href="#" class="link-map">Показать на карте</a>
+            </article>
+
+            <article class="box-contact">
+              <span class="text">Эл. адрес</span>
+              <a href="mailto:mail@ntzmk.ru">mail@ntzmk.ru</a>
+            </article>
+          </address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-left">
+          <p class="footer__desc"><span>© 2025</span><span>Все права защищены</span></p>
+          <a href="#" class="info-link">Политика в области обработки персональных данных</a>
+        </div>
+        <div class="footer__bottom-right">
+          <a href="https://x2digital.ru/" class="linkX2">
+            <img src="img/x2/x2_digital.svg" alt="x2_digital">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="online-order">
+  <div class="modal__body">
+    <button class="online-order__close js-close-modal btn-reset">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 12L7 7M12 12L17 17M12 12L17 7M12 12L7 17" stroke="currentColor" stroke-width="1.3"
+          stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+    <div class="online-order__window">
+      <form class="js-form">
+        <div class="online-order__wrapper">
+          <h3 class="online-order__title">Рассчитать проект</h3>
+          <div class="online-order__group-input">
+            <label class="input-type-1">
+              <input class="input-type-1__input required" type="text" name="name" placeholder="Ваше имя">
+              <span class="input-error-info">Введите ваше имя</span>
+            </label>
+            <label class="input-type-1">
+              <input class="input-type-1__input js-phone-mask required required-phone" type="text" name="phone"
+                placeholder="Номер телефона" inputmode="text">
+              <span class="input-error-info">Введите номер телефона</span>
+            </label>
+            <label class="input-type-1">
+              <input class="input-type-1__input required required-mail" type="text" name="email"
+                placeholder="Эл. адрес">
+              <span class="input-error-info">Введите почту</span>
+            </label>
+            <label class="textarea-type-1">
+              <textarea class="textarea-type-1__textarea required" placeholder="Сообщение"></textarea>
+              <span class="input-error-info">Введите cообщение</span>
+            </label>
+            <label class="input-type-file">
+              <input type="file" class="input-type-file__input js-file">
+              <span class="input-type-file__castom">
+                <span class="text">
+                  Загрузить файл
+                </span>
+                <span class="svg">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <use xlink:href="img/sprite.svg#inputFile"></use>
+                  </svg>
+                </span>
+              </span>
+            </label>
+          </div>
+          <div class="form-type-1__group-submit">
+            <button class="form-type-1__submit btn-reset" type="submit">
+              <span class="text">Запросить расчет</span>
+            </button>
+
+            <label class="input-type-checkbox">
+              <input class="input-type-checkbox__input required-checkbox required" type="checkbox" name="checkbox"
+                checked="">
+              <span class="castom">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none">
+                  <path d="M11.1992 0.699951L3.84922 9.44995L0.699219 5.94995" stroke="#00cb62" stroke-width="1.4"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <p class="input-type-checkbox__desc">
+                Нажимая отправить вы&nbsp;даёте согласие с&nbsp;<a href="#">политикой обработки персональных данных</a>
+              </p>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

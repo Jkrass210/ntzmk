@@ -1,0 +1,38 @@
+.box-video {
+  width: 100%;
+  height: 616px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  overflow: hidden;
+  @media (max-width: 1100px) {
+    height: 496px;
+  }
+  @media (max-width: 550px) {
+    height: 272px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  video {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  cursor: pointer;
+  &-play {
+    display: flex;
+    position: absolute;
+    @media (max-width: 1000px) {
+      width: 60px;
+      height: 40px;
+    }
+  }
+}

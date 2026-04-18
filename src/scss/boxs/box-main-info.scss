@@ -1,0 +1,30 @@
+.box-main-info {
+  display: grid;
+  grid-template-columns: calc(908 / 1368 * 100%) calc(428 / 1368 * 100%);
+  gap: 32px;
+  @media (max-width: 1100px) {
+    grid-template-columns: calc(636 / 976 * 100%) calc(320 / 976 * 100%);
+    gap: 20px;
+  }
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    gap: 88px;
+  }
+  &__nav {
+    grid-row: span 2;
+    @media (max-width: 1100px) {
+      grid-row: span 1;
+    }
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+  &__contacts {
+    @media (max-width: 1100px) {
+      grid-column: span 2;
+    }
+    @media (max-width: 1000px) {
+      grid-column: span 1;
+    }
+  }
+}

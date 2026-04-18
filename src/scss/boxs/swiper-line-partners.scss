@@ -1,0 +1,14 @@
+.swiper-line-partners {
+  .swiper-slide {
+    box-sizing: border-box;
+    height: auto;
+    width: auto;
+    &:first-child {
+      .card-line-partners {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.box-products {
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+
+    @media (max-width: 1100px) {
+      gap: 20px;
+    }
+
+    @media (max-width: 1000px) {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+}

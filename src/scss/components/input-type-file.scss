@@ -1,0 +1,44 @@
+.input-type-file {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  &__input {
+    cursor: pointer;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover + .input-type-file__castom {
+      background-color: var(--green);
+      border-color: var(--green);
+      color: var(--white);
+    }
+    &.error + .input-type-file__castom {
+      border-color: rgb(138, 0, 0);
+    }
+  }
+  &__castom {
+    width: 100%;
+    border-radius: 16px;
+    border: 1.6px solid var(--gray-text, #C8C7C7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 16px;
+    color: var(--green, #00CB62);
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 133.333%;
+    transition: color 0.4s ease-in-out, border-color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+    .svg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

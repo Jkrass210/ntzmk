@@ -1,0 +1,101 @@
+.modal-history {
+  @media (max-width: 1100px) {
+    padding: 0;
+    overflow: hidden;
+  }
+  @media (max-width: 1000px) {
+    padding: 0;
+  }
+  @media (max-width: 550px) {
+    padding: 0;
+  }
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+  &__window {
+    padding: 64px;
+    width: 948px;
+    max-width: 100%;
+    background-color: var(--white);
+    @media (max-width: 1100px) {
+      width: 100%;
+      padding: 64px 30px 20px 64px;
+    }
+    @media (max-width: 1000px) {
+      padding: 14px;
+    }
+  }
+  &__title {
+    margin-bottom: 32px;
+    color: var(--black, #000);
+    font-family: var(--font-family);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    @media (max-width: 1000px) {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    color: var(--black);
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    @media (max-width: 1100px) {
+      position: relative;
+      padding-right: 34px;
+      padding-bottom: 20px;
+      overflow: auto;
+      height: calc(100dvh - 64px - 82px);
+      &.scroll-start::after {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 34px;
+        bottom: 0;
+        height: 111px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+      }
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: var(--gray, #F5F5F5);
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--blue, #004A97);
+      }
+    }
+    @media (max-width: 1000px) {
+      font-size: 16px;
+      gap: 16px;
+      padding-right: 14px;
+      height: calc(100dvh - 14px - 56px);
+      &.scroll-start::after {
+        right: 14px;
+        height: 80px;
+      }
+    }
+    span {
+      color: var(--green, #00CB62);
+      font-weight: 600;
+    }
+    img {
+      margin: 0 auto;
+      border-radius: 16px;
+    }
+  }
+}

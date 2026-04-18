@@ -1,0 +1,138 @@
+<footer class="footer mt-148" id="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <div class="footer__top">
+        <div class="footer__top-left">
+          @@include('../components/logo-foot.html')
+        </div>
+        <div class="footer__top-right">
+          <nav class="footer__nav">
+            <ul class="footer__list list-reset">
+              <li>
+                <a href="#" class="foot-nav-link">О компании</a>
+              </li>
+              <li>
+                <a href="#" class="foot-nav-link">Продукция</a>
+              </li>
+              <li>
+                <a href="#" class="foot-nav-link">География</a>
+              </li>
+              <li>
+                <a href="#" class="foot-nav-link">Партнеры</a>
+              </li>
+              <li>
+                <a href="#" class="foot-nav-link">Вакансии</a>
+              </li>
+              <li>
+                <a href="#" class="foot-nav-link">Новости</a>
+              </li>
+              <li>
+                <a href="#" class="foot-nav-link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="footer__address">
+            <article class="box-contact">
+              <span class="text">Телефон</span>
+              <a href="tel:+7 (3435) 299-355">+7 (3435) 299-355</a>
+            </article>
+
+            <article class="box-contact">
+              <span class="text">Адрес</span>
+              <span class="info">
+                г. Нижний Тагил, ул. Шевченко, д.10
+              </span>
+              <a href="#" class="link-map">Показать на карте</a>
+            </article>
+
+            <article class="box-contact">
+              <span class="text">Эл. адрес</span>
+              <a href="mailto:mail@ntzmk.ru">mail@ntzmk.ru</a>
+            </article>
+          </address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-left">
+          <p class="footer__desc"><span>© 2025</span><span>Все права защищены</span></p>
+          <a href="#" class="info-link">Политика в области обработки персональных данных</a>
+        </div>
+        <div class="footer__bottom-right">
+          <a href="https://x2digital.ru/" class="linkX2">
+            <img src="img/x2/x2_digital.svg" alt="x2_digital">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="online-order">
+  <div class="modal__body">
+    <button class="online-order__close js-close-modal btn-reset">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 12L7 7M12 12L17 17M12 12L17 7M12 12L7 17" stroke="currentColor" stroke-width="1.3"
+          stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+    <div class="online-order__window">
+      <form class="js-form">
+        <div class="online-order__wrapper">
+          <h3 class="online-order__title">Рассчитать проект</h3>
+          <div class="online-order__group-input">
+            <label class="input-type-1">
+              <input class="input-type-1__input required" type="text" name="name" placeholder="Ваше имя">
+              <span class="input-error-info">Введите ваше имя</span>
+            </label>
+            <label class="input-type-1">
+              <input class="input-type-1__input js-phone-mask required required-phone" type="text" name="phone"
+                placeholder="Номер телефона" inputmode="text">
+              <span class="input-error-info">Введите номер телефона</span>
+            </label>
+            <label class="input-type-1">
+              <input class="input-type-1__input required required-mail" type="text" name="email"
+                placeholder="Эл. адрес">
+              <span class="input-error-info">Введите почту</span>
+            </label>
+            <label class="textarea-type-1">
+              <textarea class="textarea-type-1__textarea required" placeholder="Сообщение"></textarea>
+              <span class="input-error-info">Введите cообщение</span>
+            </label>
+            <label class="input-type-file">
+              <input type="file" class="input-type-file__input js-file">
+              <span class="input-type-file__castom">
+                <span class="text">
+                  Загрузить файл
+                </span>
+                <span class="svg">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <use xlink:href="img/sprite.svg#inputFile"></use>
+                  </svg>
+                </span>
+              </span>
+            </label>
+          </div>
+          <div class="form-type-1__group-submit">
+            <button class="form-type-1__submit btn-reset" type="submit">
+              <span class="text">Запросить расчет</span>
+            </button>
+
+            <label class="input-type-checkbox">
+              <input class="input-type-checkbox__input required-checkbox required" type="checkbox" name="checkbox"
+                checked="">
+              <span class="castom">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none">
+                  <path d="M11.1992 0.699951L3.84922 9.44995L0.699219 5.94995" stroke="#00cb62" stroke-width="1.4"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <p class="input-type-checkbox__desc">
+                Нажимая отправить вы&nbsp;даёте согласие с&nbsp;<a href="#">политикой обработки персональных данных</a>
+              </p>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

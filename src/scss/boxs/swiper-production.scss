@@ -1,0 +1,58 @@
+.swiper-production {
+  position: relative;
+  overflow: hidden;
+
+  .swiper-slide {
+    box-sizing: border-box;
+    height: auto;
+  }
+
+  &__wrapper-nav {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    left: 116px;
+    right: 44px;
+    bottom: 44px;
+    @media (max-width: 1100px) {
+      left: 100px;
+    }
+    @media (max-width: 1000px) {
+      left: 36px;
+      right: 24px;
+      bottom: 24px;
+    }
+  }
+
+  .swiper-btn-type-1 {
+    color: var(--white);
+    @media (max-width: 1000px) {
+      width: 44px;
+      height: 44px;
+    }
+  }
+  &-pagination {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 100%;
+    border: 1.2px solid var(--white, #FFF);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    color: #FFF;
+    font-family: var(--font-family);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 117.647%;
+    @media (max-width: 1000px) {
+      width: 44px;
+      height: 44px;
+      font-size: 14px;
+    }
+  }
+}

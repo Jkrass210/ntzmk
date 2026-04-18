@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/components/head.html',{"title":"404"})
+<body>
+  @@include('html/boxs/preloader.html')
+  @@include('html/boxs/header.html')
+  <main class="main">
+    <div class="no-page">
+      <div class="container">
+        <div class="no-page-box">
+          <div class="no-page-box-img">
+            <img src="img/404/404.svg" alt="img">
+          </div>
+          <p class="no-page-box-desc">Запрашиваемая страница не найдена или удалена</p>
+          <a href="#" class="no-page-box-link">
+            <span class="text">Главная страница</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  @@include('html/boxs/footer.html')
+</body>
+</html>

@@ -1,0 +1,161 @@
+<section class="mt-32">
+  <div class="container">
+    <div class="section-contacts">
+      <div class="section-contacts__top">
+        <div class="section-contacts__group-info">
+          <div class="section-contacts__info first">
+            <article class="box-contact">
+              <span class="text">Адрес</span>
+              <span class="info">622005, г. Нижний Тагил, <br>ул. Шевченко, 10</span>
+            </article>
+          </div>
+          <span class="border"></span>
+          <div class="section-contacts__info">
+            <article class="box-contact">
+              <span class="text">Приемная</span>
+              <a href="tel:+7 (3435) 299-300">+7 (3435) 299-300</a>
+            </article>
+
+            <article class="box-contact">
+              <span class="text">Отдел снабжения</span>
+              <a href="tel:+7 (3435) 299-310">+7 (3435) 299-310</a>
+            </article>
+
+            <article class="box-contact">
+              <span class="text">Отдел логистики</span>
+              <a href="tel:+7 (3435) 299-330">+7 (3435) 299-330</a>
+            </article>
+          </div>
+          <span class="border"></span>
+          <div class="section-contacts__info">
+            <article class="box-contact">
+              <span class="text">Отдел кадров</span>
+              <span class="info">
+                <a href="tel:+7 (3435) 299-327">+7 (3435) 299-327</a>
+                <a href="tel:+7 912 680 04 57">+7 912 680 04 57</a>
+              </span>
+              <a href="mailto:personal@ntzmk.ru" class="link-map">personal@ntzmk.ru</a>
+            </article>
+          </div>
+          <span class="border"></span>
+          <div class="section-contacts__info">
+            <article class="box-contact">
+              <span class="text">Эл. почта</span>
+              <a href="mailto:mail@ntzmk.ru" class="link-map">mail@ntzmk.ru</a>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="section-contacts__middle">
+        <div class="map-contacts" id="map-contacts"></div>
+        <script>
+          ymaps.ready(init);
+
+          function init() {
+            const map = new ymaps.Map("map-contacts", {
+              center: [57.949831, 60.026074],
+              zoom: 15,
+              controls: [] // Отключаем все элементы управления
+            });
+
+            const placemark = new ymaps.Placemark(
+              [57.949831, 60.026074],
+              {
+                hintContent: "Моя метка",
+                balloonContent: "Описание"
+              },
+              {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/section-contacts/1.svg',
+                iconImageSize: [48, 48],
+                iconImageOffset: [-20, -20]
+              }
+            );
+
+            map.geoObjects.add(placemark);
+          }
+        </script>
+      </div>
+      <div class="section-contacts__bottom">
+        <div class="section-contacts-requisites">
+          <div class="section-contacts-requisites__line-top">
+            <h3 class="section-contacts-requisites__title">
+              Реквизиты
+            </h3>
+            <button class="section-contacts-requisites__btn js-open-tab btn-reset active">
+              <span class="svg">
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                  <use xlink:href="img/sprite.svg#arrRequisites"></use>
+                </svg>
+              </span>
+            </button>
+          </div>
+
+          <div class="section-contacts-requisites__box-info js-tab active">
+            <div class="section-contacts-requisites__group-info">
+              <div class="section-contacts-requisites__info">
+                <div class="box-contact-info">
+                  <span class="text">Полное наименование Общества:</span>
+                  <p class="info">Общество с ограниченной ответственностью «Нижнетагильский завод металлических
+                    конструкций»</p>
+                </div>
+
+                <div class="box-contact-info">
+                  <span class="text">Сокращенное наименование Общества:</span>
+                  <p class="info">ООО «НТЗМК»</p>
+                </div>
+
+                <div class="box-contact-info">
+                  <span class="text">Полное наименование Общества на английском языке:</span>
+                  <p class="info">«N-Tagil plant of steel structures» Ltd.</p>
+                </div>
+
+                <div class="box-contact-info">
+                  <span class="text">Сокращенное наименование Общества на английском языке:</span>
+                  <p class="info">«NTZMK» Ltd.</p>
+                </div>
+
+                <div class="box-contact-info">
+                  <span class="text">Юридический/ фактический/ почтовый адрес:</span>
+                  <p class="info">622005, Свердловская обл., г. Нижний Тагил, ул. Шевченко, 10</p>
+                </div>
+              </div>
+              <div class="section-contacts-requisites__info">
+                <h4 class="section-contacts-requisites__info-title">
+                  Банковские реквизиты
+                </h4>
+                <div class="section-contacts-requisites__main-info">
+                  <span>р/с  40702810000000068182 в Банк ГПБ (АО), г. Москва</span>
+                  <span>БИК  044525823</span>
+                  <span>к/с 30101810200000000823</span>
+                  <span>ОГРН 1026601367198 (дата присвоения 21.08.2002)</span>
+                  <span>ИНН 6668020461</span>
+                  <span>КПП 662301001</span>
+                  <span>ОКВЭД 25.11 (с 01.01.2017), 41.2, 41.20, 43.2, 43.29. 43.99.5, 43.99.7</span>
+                  <span>ОКПО 51835686</span>
+                  <span>ОКАТО 65476382000</span>
+                  <span>ОКОГУ 49013</span>
+                  <span>ОКФС 16</span>
+                  <span>ОКОПФ 65</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-contacts-requisites__line-btn-copy">
+              <button class="section-contacts-requisites__btn-copy btn-reset btn-js-copy">
+                <span class="svg">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <use xlink:href="img/sprite.svg#btCopy"></use>
+                  </svg>
+                </span>
+                <span class="text">
+                  Копировать
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

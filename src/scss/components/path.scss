@@ -1,0 +1,93 @@
+.path {
+  padding-top: 212px;
+  padding-bottom: 32px;
+  &__list {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    li {
+      &:last-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      a {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        white-space: nowrap;
+        line-height: 143%;
+        color: var(--gray-text, #C8C7C7);
+        transition: color 0.4s ease-in-out;
+        
+        &:focus,&:focus-visible {
+          outline: none;
+        }
+        &:focus-visible,&:hover,&:active {
+          color: var(--blue);
+        }
+      }
+      &:not(:first-child) {
+        position: relative;
+        padding-left: 26px;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 9px;
+          width: 8px;
+          height: 1px;
+          background-color: var(--blue);
+        }
+      }
+      &:last-child {
+        a {
+          pointer-events: none;
+          color: var(--black);
+        }
+      }
+    }
+  }
+  &__box-back {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .path {
+    padding-top: 196px;
+    padding-bottom: 28px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .path {
+    padding-top: 100px;
+    padding-bottom: 24px;
+    &__list {
+      display: none;
+    }
+    &__box-back {
+      display: flex;
+    }
+    &__link-back {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      color: var(--black, #000);
+      svg {
+        pointer-events: none;
+      }
+      .text {
+        pointer-events: none;
+        display: flex;
+      }
+      &:focus,&:focus-visible {
+        outline: none;
+      }
+    }
+  }
+}

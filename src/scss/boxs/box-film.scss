@@ -1,0 +1,19 @@
+.box-film {
+  &__desc {
+    margin-bottom: 28px;
+    color: var(--black, #000);
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    @media (max-width: 1100px) {
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 1000px) {
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+  }
+}

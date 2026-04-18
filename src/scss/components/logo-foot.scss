@@ -1,0 +1,29 @@
+.logo-foot {
+  position: relative;
+  height: 64px;
+  width: 100%;
+  max-width: 551px;
+  display: flex;
+
+  &__link {
+    position: absolute;
+    display: flex;
+
+    &.first {
+      inset: 0 55% 0 0;
+    }
+
+    &.last {
+      inset: 0 0 0 45%;
+    }
+  }
+
+  @media (max-width:1100px) {
+    height: 52px;
+    max-width: 418px;
+  }
+  @media (max-width: 1000px) {
+    height: 40px;
+    max-width: 328px;
+  }
+}

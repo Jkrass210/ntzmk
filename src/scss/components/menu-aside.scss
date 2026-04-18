@@ -1,0 +1,42 @@
+.menu-aside {
+  position: sticky;
+  top: 130px;
+  padding: 24px;
+  border-radius: 24px;
+  background-color: var(--gray, #F5F5F5);
+  @media (max-width: 1100px) {
+    top: 100px;
+    padding: 16px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-radius: 12px;
+    color: var(--black, #000);
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+    @media (max-width: 1100px) {
+      padding: 12px;
+      font-size: 16px;
+    }
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      background-color: var(--gray-10, #EAEAEA);
+    }
+    &.active {
+      color: var(--white);
+      background-color: var(--green);
+    }
+  }
+}

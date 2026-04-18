@@ -1,0 +1,38 @@
+.box-licenses {
+  /*@media (max-width: 1000px) {
+    &-swiper {
+      margin: 0 -16px;
+      padding: 0 16px;
+    }
+  }*/
+  .static-tab {
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: border-color 0.4s ease-in-out;
+    &:has(.active) {
+      border-color: var(--gray-10, #EAEAEA);
+    }
+    &__btn {
+      padding: 40px 32px;
+      font-size: 20px;
+      font-weight: 500;
+      gap: 16px;
+      .text {
+        text-align: start;
+      }
+      @media (max-width: 1000px) {
+        padding: 16px;
+        font-size: 18px;
+      }
+      &.active {
+        border-color: transparent;
+        background: transparent;
+      }
+    }
+    &__box {
+      &.active {
+        background: transparent;
+      }
+    }
+  }
+}

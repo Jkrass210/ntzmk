@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Страница новости</title>
+  <link href="css/normalize.min.css?_v=20260331123906" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20260331123906" rel="stylesheet">
+  <link href="css/style.css?_v=20260331123906" rel="stylesheet">
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20260331123906"></script>
+  
+  <script src="js/jquery-3.7.1.min.js?_v=20260331123906" defer></script>
+  <script src="js/jquery.validate.min.js?_v=20260331123906" defer></script>
+  <script src="js/jquery.inputmask.min.js?_v=20260331123906" defer></script>
+  <script src="js/swiper-bundle.min.js?_v=20260331123906" defer></script>
+  <script src="js/fslightbox.js?_v=20260331123906" defer></script>
+  <script type="module" src="js/main.js?_v=20260331123906"></script>
+</head>
+
+<body>
+  <div id="preloader">
+  <div class="loader"></div>
+</div>
+  <main class="main">
+    <div class="box-back">
+  <div class="container-min">
+    <div class="box-back__line">
+      <a href="#" class="box-back__link">
+        <span class="svg">
+          <svg width="14" height="9" viewBox="0 0 14 9" fill="none">
+            <use xlink:href="img/sprite.svg#arrBackNews"></use>
+          </svg>
+        </span>
+        <span class="text">
+          Вернуться назад
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+    <div class="title-page">
+  <div class="container-min">
+    <div class="title-page__line">
+      <h1 class="title uppercase">Уникальный фрезерный станок вскоре пополнит парк оборудования «НТЗМК»</h1>
+    </div>
+  </div>
+</div>
+    <section class="mt-16">
+  <div class="container-min">
+    <div class="section-news">
+      <div class="section-news__top">
+        <div class="section-news__line-tags">
+          <span class="tag">
+            <time datetime="28 августа 2025">28 августа 2025</time>
+          </span>
+          <span class="tag">Новости завода</span>
+        </div>
+
+        <div class="static-box-min-p">
+          <p>
+            Установку сейчас изготавливает китайская компания. Высокоскоростной трехкоординатный фрезерно-сверлильный
+            станок с подвижным порталом производится по индивидуальному заказу «НТЗМК» и пока его аналогов в мире нет.
+          </p>
+        </div>
+
+        <div class="section-news__swiper">
+          <div class="swiper-section-news swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="card-section-news">
+                  <a href="img/card-section-news/1.jpg" class="card-section-news__link" data-fslightbox="gallery">
+                    <picture><source srcset="img/card-section-news/1.webp" type="image/webp"><img src="img/card-section-news/1.jpg" alt="img"></picture>
+                  </a>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="card-section-news">
+                  <a href="img/card-section-news/2.jpg" class="card-section-news__link" data-fslightbox="gallery">
+                    <picture><source srcset="img/card-section-news/2.webp" type="image/webp"><img src="img/card-section-news/2.jpg" alt="img"></picture>
+                  </a>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="card-section-news">
+                  <a href="img/card-section-news/2.jpg" class="card-section-news__link" data-fslightbox="gallery">
+                    <picture><source srcset="img/card-section-news/2.webp" type="image/webp"><img src="img/card-section-news/2.jpg" alt="img"></picture>
+                  </a>
+                </article>
+              </div>
+            </div>
+
+            <div class="static-grour-btn">
+              <div class="static-grour-swiper-btn">
+                <button class="swiper-btn-type-1 --prev btn-reset">
+                  <svg width="26" height="12" viewBox="0 0 26 12" fill="none">
+                    <use xlink:href="img/sprite.svg#arrowBtnSwiper1"></use>
+                  </svg>
+                </button>
+                <button class="swiper-btn-type-1 --next btn-reset">
+                  <svg width="26" height="12" viewBox="0 0 26 12" fill="none">
+                    <use xlink:href="img/sprite.svg#arrowBtnSwiper2"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="static-box-min-p">
+          <p>
+            Разработчики оснастили станок основной поворотной фрезерной головой мощностью 50 кВТ и боковыми — 45 кВТ-ми.
+            Наделили станок широкими возможностями: предварительная фрезеровка плоскости прилегания фланца, финишная
+            фрезеровка фланца в автоматическом режиме, автоматическая обработка металлоконструкций в пяти плоскостях,
+            без смены положения заготовки. Параллельно можно проводить сверление, зенкование, маркировку, гравировку
+            и фрезеровку на боковых поверхностях обрабатываемой конструкции. Станок сможет сверлить технологические
+            отверстия балки в собранном виде, что увеличит точность изготовления конструкции.
+          </p>
+        </div>
+
+        <article class="section-news__main-article main-article">
+          <p>
+            Станок предназначен для фрезерования крупных конструкций: балок, колонн. Способен обрабатывать 14- метровые
+            детали шириной до 3-х метров и высотой до 1.8 метра. Кроме того, он оснащен тремя лазерными датчиками,
+            позволяющими определять положения заготовки и устанавливать координаты обработки
+          </p>
+
+          <div class="main-article__person">
+            <div class="main-article__box-img">
+              <picture><source srcset="img/main-article/avatar.webp" type="image/webp"><img src="img/main-article/avatar.png" alt="img"></picture>
+            </div>
+            <div class="main-article__info">
+              <h4 class="name">Евгений Бельтюков</h4>
+              <p class="desc">Технический директор ООО «НТЗМК»</p>
+            </div>
+          </div>
+        </article>
+
+        <div class="static-box-min-p">
+          <p>
+            Как только станок будет готов, нижнетагильские специалисты отправятся в Чэнду принимать работу и устраивать
+            тест-драйв.
+          </p>
+          <p>
+            «На месте будет реальное фрезерование, сверление той конструкции, которую мы заказали. При заключении
+            договора мы согласовывали совместную программу «горячей» приёмки и конструктив обрабатываемой заготовки,
+            которую подготавливает производитель оборудования. После этого станок разберут, упакуют и отправят в
+            Россию», – прокомментировал Евгений Бельтюков.
+          </p>
+          <p>
+            Посылку из Кита на заводе ждут в начале 2026 года. Установка стоимостью 145 миллионов рублей призвана
+            заменить морально устаревший горьковский станок по фрезерованию торцов металлоконструкций. Оборудование 1961
+            года выпуска ждет глобальная модернизация. Но отказываться от него не собираются. Подобных в стране остались
+            единицы.
+          </p>
+          <p>
+            Сейчас «НТЗМК» готовит площадку для нового оборудования. Чертежи фундамента уже готовы. Работы по его
+            возведению начнутся осенью.
+          </p>
+
+        </div>
+      </div>
+      <div class="section-news__bottom">
+        <h3 class="section-news__bottom-title">
+          Другие новости
+        </h3>
+
+        <div class="section-news__another-news">
+          <div class="line-news">
+            <div class="line-news__box-swiper">
+              <div class="another-news swiper-line-news swiper-container">
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide">
+                    <article class="card-line-news">
+                      <a href="#" class="card-line-news__link">
+                        <span class="tag"><time datetime="28 августа 2025">28 августа 2025</time></span>
+                        <span class="tag">СМИ о нас</span>
+                      </a>
+                      <div class="card-line-news__box-img">
+                        <picture><source srcset="img/card-line-news/1.webp" type="image/webp"><img src="img/card-line-news/1.jpg" alt="img"></picture>
+                      </div>
+                      <h4 class="card-line-news__title">
+                        Семь раз отмерь...
+                        <span class="desc">
+                          За каждой построенной конструкцией стоят люди, которые умеют вдыхать жизнь в холодный металл. Александр Шилинг и Дмитрий Крыгин — два мастера, знающие, какие инструменты и умения нужны для этого.
+                        </span>
+                      </h4>
+                    </article>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <article class="card-line-news">
+                      <a href="#" class="card-line-news__link">
+                        <span class="tag"><time datetime="28 августа 2025">28 августа 2025</time></span>
+                        <span class="tag">СМИ о нас</span>
+                      </a>
+                      <div class="card-line-news__box-img">
+                        <picture><source srcset="img/card-line-news/2.webp" type="image/webp"><img src="img/card-line-news/2.jpg" alt="img"></picture>
+                      </div>
+                      <h4 class="card-line-news__title">
+                        Из тагильского металла строят электростанцию на востоке России
+                        <span class="desc">
+                          Один из крупнейших производителей сварных металлоконструкций страны подвёл итоги в честь профессионального праздника. 2025 год стал для «НТЗМК» (входит в промышленную Группу «НЭК») особенно продуктивным. В течение первых месяцев завод завершил сразу несколько крупных заказа. Отгружены металлоконструкции для Южно-Якутской ТЭС, комплекса по переработке отходов «Островский» в Ленинградской области и колёсно-бандажного цеха
+                        </span>
+                      </h4>
+                    </article>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <article class="card-line-news">
+                      <a href="#" class="card-line-news__link">
+                        <span class="tag"><time datetime="28 августа 2025">28 августа 2025</time></span>
+                        <span class="tag">СМИ о нас</span>
+                      </a>
+                      <div class="card-line-news__box-img">
+                        <picture><source srcset="img/card-line-news/1.webp" type="image/webp"><img src="img/card-line-news/1.jpg" alt="img"></picture>
+                      </div>
+                      <h4 class="card-line-news__title">
+                        Ледовый дебют в Президентском ФОКе
+                        <span class="desc">
+                          Один из крупнейших производителей сварных металлоконструкций страны подвёл итоги в честь профессионального праздника. 2025 год стал для «НТЗМК» (входит в промышленную Группу «НЭК») особенно продуктивным. В течение первых месяцев завод завершил сразу несколько крупных заказа. Отгружены металлоконструкции для Южно-Якутской ТЭС, комплекса по переработке отходов «Островский» в Ленинградской области и колёсно-бандажного цеха
+                        </span>
+                      </h4>
+                    </article>
+                  </div>
+                </div>
+              </div>
+
+              <div class="static-grour-btn">
+                <div class="static-grour-swiper-btn">
+                  <button class="swiper-btn-type-1 --prev btn-reset">
+                    <svg width="26" height="12" viewBox="0 0 26 12" fill="none">
+                      <use xlink:href="img/sprite.svg#arrowBtnSwiper1"></use>
+                    </svg>
+                  </button>
+                  <button class="swiper-btn-type-1 --next btn-reset">
+                    <svg width="26" height="12" viewBox="0 0 26 12" fill="none">
+                      <use xlink:href="img/sprite.svg#arrowBtnSwiper2"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <a href="#" class="all-link">
+                  <span class="text">Все новости</span>
+                  <span class="svg">
+                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none">
+                      <use xlink:href="img/sprite.svg#arrowMin"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+  <footer class="footer mt-148" id="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <div class="footer__top">
+        <div class="footer__top-left">
+          <div class="logo-foot">
+  <a href="/" class="logo-foot__link first"></a>
+  <a href="https://www.nec.pro/" class="logo-foot__link last"></a>
+  <picture>
+    <source srcset="img/logo/logo-foot-min.svg" media="(max-width: 1100px)">
+    <img src="img/logo/logo-foot.svg" alt="svg">
+  </picture>
+</div>
+        </div>
+        <div class="footer__top-right">
+          <nav class="footer__nav">
+            <ul class="footer__list list-reset">
+              <li>
+                <a href="#" class="foot-nav-link">О компании</a>
+              </li>
+              <li>
+                <a href="#" class="foot-nav-link">Продукция</a>
+              </li>
+              <li>
+                <a href="#" class="foot-nav-link">География</a>
+              </li>
+              <li>
+                <a href="#" class="foot-nav-link">Партнеры</a>
+              </li>
+              <li>
+                <a href="#" class="foot-nav-link">Вакансии</a>
+              </li>
+              <li>
+                <a href="#" class="foot-nav-link">Новости</a>
+              </li>
+              <li>
+                <a href="#" class="foot-nav-link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="footer__address">
+            <article class="box-contact">
+              <span class="text">Телефон</span>
+              <a href="tel:+7 (3435) 299-355">+7 (3435) 299-355</a>
+            </article>
+
+            <article class="box-contact">
+              <span class="text">Адрес</span>
+              <span class="info">
+                г. Нижний Тагил, ул. Шевченко, д.10
+              </span>
+              <a href="#" class="link-map">Показать на карте</a>
+            </article>
+
+            <article class="box-contact">
+              <span class="text">Эл. адрес</span>
+              <a href="mailto:mail@ntzmk.ru">mail@ntzmk.ru</a>
+            </article>
+          </address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-left">
+          <p class="footer__desc"><span>© 2025</span><span>Все права защищены</span></p>
+          <a href="#" class="info-link">Политика в области обработки персональных данных</a>
+        </div>
+        <div class="footer__bottom-right">
+          <a href="https://x2digital.ru/" class="linkX2">
+            <img src="img/x2/x2_digital.svg" alt="x2_digital">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="online-order">
+  <div class="modal__body">
+    <button class="online-order__close js-close-modal btn-reset">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 12L7 7M12 12L17 17M12 12L17 7M12 12L7 17" stroke="currentColor" stroke-width="1.3"
+          stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+    <div class="online-order__window">
+      <form class="js-form">
+        <div class="online-order__wrapper">
+          <h3 class="online-order__title">Рассчитать проект</h3>
+          <div class="online-order__group-input">
+            <label class="input-type-1">
+              <input class="input-type-1__input required" type="text" name="name" placeholder="Ваше имя">
+              <span class="input-error-info">Введите ваше имя</span>
+            </label>
+            <label class="input-type-1">
+              <input class="input-type-1__input js-phone-mask required required-phone" type="text" name="phone"
+                placeholder="Номер телефона" inputmode="text">
+              <span class="input-error-info">Введите номер телефона</span>
+            </label>
+            <label class="input-type-1">
+              <input class="input-type-1__input required required-mail" type="text" name="email"
+                placeholder="Эл. адрес">
+              <span class="input-error-info">Введите почту</span>
+            </label>
+            <label class="textarea-type-1">
+              <textarea class="textarea-type-1__textarea required" placeholder="Сообщение"></textarea>
+              <span class="input-error-info">Введите cообщение</span>
+            </label>
+            <label class="input-type-file">
+              <input type="file" class="input-type-file__input js-file">
+              <span class="input-type-file__castom">
+                <span class="text">
+                  Загрузить файл
+                </span>
+                <span class="svg">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <use xlink:href="img/sprite.svg#inputFile"></use>
+                  </svg>
+                </span>
+              </span>
+            </label>
+          </div>
+          <div class="form-type-1__group-submit">
+            <button class="form-type-1__submit btn-reset" type="submit">
+              <span class="text">Запросить расчет</span>
+            </button>
+
+            <label class="input-type-checkbox">
+              <input class="input-type-checkbox__input required-checkbox required" type="checkbox" name="checkbox"
+                checked="">
+              <span class="castom">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none">
+                  <path d="M11.1992 0.699951L3.84922 9.44995L0.699219 5.94995" stroke="#00cb62" stroke-width="1.4"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <p class="input-type-checkbox__desc">
+                Нажимая отправить вы&nbsp;даёте согласие с&nbsp;<a href="#">политикой обработки персональных данных</a>
+              </p>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

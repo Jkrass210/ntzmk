@@ -1,0 +1,12 @@
+.swiper-licenses {
+  overflow: hidden;
+  @media (max-width: 1000px) {
+    margin: 0 -16px;
+    padding: 0 16px;
+  }
+  .swiper-slide {
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+  }
+}
